@@ -594,7 +594,7 @@ function generateSurveyLink(row) {
     else if (/^\d+$/.test(receiptNo) && salesType === 'DINE-IN') { surveyModel = '6.0'; orderID = receiptNo; numericOT = '1'; }
     else if (receiptNo.startsWith('K252') && salesType === 'TAKEAWAY') { surveyModel = '4.0'; orderID = receiptNo.slice(-4); numericOT = '2'; }
     else if (receiptNo.startsWith('K252') && salesType === 'DINE-IN') { surveyModel = '4.0'; orderID = receiptNo.slice(-4); numericOT = '1'; }
-    else if (receiptNo.startsWith('K525') && salesType === 'DELIVERY') { surveyModel = '3.0'; orderID = receiptNo; numericOT = '3'; }
+    else if (receiptNo.startsWith('K252') && salesType === 'DELIVERY') { surveyModel = '3.0'; orderID = receiptNo; numericOT = '3'; }
     else { return null; }
 
     const date = convertExcelDate(row['Date']);
